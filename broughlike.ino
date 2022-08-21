@@ -22,7 +22,10 @@ void loop() {
   arduboy.fillRect(enemy.x, enemy.y, enemy.w, enemy.h);
 
   arduboy.pollButtons();
-  heroMove();
+  actionsInput();
+
+  arduboy.print("Distance:");
+  arduboy.println(distance);
 
 
   
