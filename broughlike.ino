@@ -7,11 +7,11 @@ void setup() {
   arduboy.display();
     
 
-  hero.x = 10;
-  hero.y = 10;
+  hero.x = 8;
+  hero.y = 8;
   
   enemy.x = 80;
-  enemy.y = 30;
+  enemy.y = 40;
 }
 
 void loop() {
@@ -21,9 +21,11 @@ void loop() {
 
   arduboy.fillRect(enemy.x, enemy.y, enemy.w, enemy.h);
 
-  if (enemy.x > hero.x && (enemy.x - hero.x > 16)){
-    enemy.x--;
-  }
+  arduboy.pollButtons();
+  heroMove();
+
+
+  
 
   arduboy.display();
 
