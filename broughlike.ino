@@ -18,9 +18,11 @@ void loop() {
   arduboy.clear();
 
   //arduboy.fillRect(hero.x, hero.y, hero.w, hero.h);
-  sprites.drawOverwrite(hero.x, hero.y, player, 2);
+  sprites.drawOverwrite(hero.x, hero.y, playerSpr, 0);
 
-  arduboy.fillRect(enemy.x, enemy.y, enemy.w, enemy.h);
+  //arduboy.fillRect(enemy.x, enemy.y, enemy.w, enemy.h);
+  sprites.drawOverwrite(enemy.x, enemy.y, enemySpr, 0);
+
 
   arduboy.pollButtons();
   actionsInput();
