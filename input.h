@@ -4,20 +4,21 @@
 void enemyMove();
 
 void actionsInput(){
+  uint8_t step = 16;
   if (arduboy.justPressed(RIGHT_BUTTON)&& hero.x < (arduboy.width() - hero.w)){
-    hero.x += 8;
+    hero.x += step;
     //enemyMove();
   }
   if (arduboy.justPressed(LEFT_BUTTON) && hero.x > 0){
-    hero.x -= 8;
+    hero.x -= step;
     //enemyMove();
   }
   if (arduboy.justPressed(DOWN_BUTTON) && hero.y < (arduboy.height() - hero.h)){
-    hero.y += 8;
+    hero.y += step;
     //enemyMove();
   }
   if (arduboy.justPressed(UP_BUTTON)&& hero.y > 0){
-    hero.y -= 8;
+    hero.y -= step;
     //enemyMove();
   }
 
